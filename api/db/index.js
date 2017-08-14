@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
 import config from 'config';
 
-import Todo from './models/todo';
+import Reminder from './models/reminder';
+import User from './models/user';
 
 export const Db = {
   connect() {
@@ -10,5 +11,6 @@ export const Db = {
 };
 
 export const Models = {
-  Todo,
+  Reminder,
+  User,
 };

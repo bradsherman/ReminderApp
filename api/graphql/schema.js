@@ -1,16 +1,17 @@
 export default `
 
-type Todo {
+type Reminder {
   _id: String!
   description: String!
+  author: String!
 }
 
 type Query {
-  allTodos: [Todo!]!
+  allReminders: [Reminder!]!
 }
 
 type Mutation {
-  createTodo(description: String!): Todo!
+  createReminder(description: String!): Reminder!
 }
 
 `;

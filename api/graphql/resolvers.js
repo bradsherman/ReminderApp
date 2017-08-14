@@ -1,17 +1,17 @@
 export default {
   Query: {
-    allTodos: async (parent, args, { Models }) => {
-      const todos = await Models.Todo.find();
-      return todos.map((x) => {
+    allReminders: async (parent, args, { Models }) => {
+      const reminders = await Models.Reminder.find();
+      return reminders.map((x) => {
         x._id = x._id.toString();
       });
     },
   },
   Mutation: {
-    createTodo: async (parent, args, { Models }) => {
-      const todo = await new Models.Todo(args).save();
-      todo._id = todo._id.toString();
-      return todo;
+    createReminder: async (parent, args, { Models }) => {
+      const reminder = await new Models.Reminder(args).save();
+      reminder._id = reminder._id.toString();
+      return reminder;
     },
   },
 };

@@ -1,0 +1,26 @@
+<div class="add-reminder-form text-center">
+  <h1>Reminders</h1>
+  <div class="form-group">
+    <input type="text" class="form-control input-lg" placeholder="Add Reminder..." autofocus #reminderText>
+    <br>
+    <button (click)="addReminder($event, reminderText)" class="btn btn-primary btn-block">Create</button>
+  </div>
+</div>
+
+<div class="reminder-list">
+  <div *ngFor="let reminder of reminders">
+    <div>{{ reminder.description }} <i>{{ reminder.author }}</i></div>
+    <!-- <div class="col-md-1">
+      <input type="checkbox" [checked]="reminder.isCompleted" (click)="updateStatus(reminder)">
+    </div> -->
+    <!-- <div class="col-md-7">
+      <span [class.hidden]="reminder.isEditMode">{{reminder.text}}</span>
+      <input type="text" [class.hidden]="!reminder.isEditMode" [value]="reminder.text" (keypress)="updateReminderText($event, reminder)">
+      <input type="button" [class.hidden]="!reminder.isEditMode" [value]="Cancel" (click)="setEditState(reminder, false)" class="btn btn-warning">
+    </div> -->
+    <!-- <div class="col-md-4 btns">
+      <input (click)="deleteReminder(reminder)" type="button" class="btn-danger btn pull-right" value="Delete">
+      <input [class.disabled]="reminder.isCompleted" (click)="setEditState(reminder, true)" type="button" class="btn-default btn pull-right" value="Edit">
+    </div> -->
+  </div>
+</div>
