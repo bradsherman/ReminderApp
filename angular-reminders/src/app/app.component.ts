@@ -6,7 +6,7 @@ import { ReminderService } from './services/reminder/reminder.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [Config, ReminderService]
+  providers: [ReminderService]
 })
 export class AppComponent {
   title = 'app works!';

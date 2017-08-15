@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { Config } from './app.constants';
 import { RemindersComponent } from './components/reminders/reminders.component';
 
 @NgModule({
@@ -16,7 +17,7 @@ import { RemindersComponent } from './components/reminders/reminders.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [Config],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

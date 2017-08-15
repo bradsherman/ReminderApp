@@ -9,10 +9,13 @@
 
 <div class="reminder-list">
   <div *ngFor="let reminder of reminders">
-    <div>{{ reminder.description }} <i>{{ reminder.author }}</i></div>
     <!-- <div class="col-md-1">
       <input type="checkbox" [checked]="reminder.isCompleted" (click)="updateStatus(reminder)">
     </div> -->
+    <div>
+      {{ reminder.description }} - <i>{{ reminder.author }}</i>
+
+    </div>
     <!-- <div class="col-md-7">
       <span [class.hidden]="reminder.isEditMode">{{reminder.text}}</span>
       <input type="text" [class.hidden]="!reminder.isEditMode" [value]="reminder.text" (keypress)="updateReminderText($event, reminder)">
